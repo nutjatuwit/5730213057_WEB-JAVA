@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 30, 2016 5:24:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sportsell.Product" table="product" catalog="sportclothshop" optimistic-lock="version">
+        <id name="pid" type="java.lang.Integer">
+            <column name="PID" />
+            <generator class="identity" />
+        </id>
+        <property name="pteam" type="string">
+            <column name="PTeam" length="100" not-null="true" />
+        </property>
+        <property name="psize" type="string">
+            <column name="PSize" length="5" not-null="true" />
+        </property>
+        <property name="pcolor" type="string">
+            <column name="PColor" length="10" not-null="true" />
+        </property>
+        <property name="pprice" type="double">
+            <column name="PPrice" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="pamount" type="int">
+            <column name="PAmount" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
